@@ -24,7 +24,20 @@
    python test_ISIC.py
    python test_COV.py
    ```
- 
+## Citation
+If you find the codebase useful for your research, please cite the papers:
+```
+@article{chen2023cotrfuse,
+  title={CoTrFuse: a novel framework by fusing CNN and transformer for medical image segmentation},
+  author={Chen, Yuanbin and Wang, Tao and Tang, Hui and Zhao, Longxuan and Zhang, Xinlin and Tan, Tao and Gao, Qinquan and Du, Min and Tong, Tong},
+  journal={Physics in Medicine \& Biology},
+  volume={68},
+  number={17},
+  pages={175027},
+  year={2023},
+  publisher={IOP Publishing}
+}
+```
 ## References
    * [TransUnet](https://github.com/Beckschen/TransUNet)
    * [SwinTransformer](https://github.com/microsoft/Swin-Transformer)
