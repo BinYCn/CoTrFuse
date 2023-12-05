@@ -79,13 +79,13 @@ epochs = args.warm_epoch + args.end_epoch
 train_csv = args.csv_dir_train
 df_train = pd.read_csv(train_csv)
 train_imgs, train_masks = args.imgs_train_path, args.labels_train_path
-train_imgs = [''.join([train_imgs, '/', i.replace('.png', '.png')]) for i in df_train['image_name']]
-train_masks = [''.join([train_masks, '/', i.replace('.jpg', '_segmentation.png')]) for i in df_train['image_name']]
+train_imgs = [''.join([train_imgs, '/', i + 'png']) for i in df_train['image_name']]
+train_masks = [''.join([train_masks, '/', i + '_segmentation.png')]) for i in df_train['image_name']]
 
 df_val = pd.read_csv(args.csv_dir_val)
 val_imgs, val_masks = args.imgs_val_path, args.labels_val_path
-val_imgs = [''.join([val_imgs, '/', i.replace('.png', '.png')]) for i in df_val['image_name']]
-val_masks = [''.join([val_masks, '/', i.replace('.jpg', '_segmentation.png')]) for i in df_val['image_name']]
+val_imgs = [''.join([val_imgs, '/', i + '.png')]) for i in df_val['image_name']]
+val_masks = [''.join([val_masks, '/', i + '_segmentation.png')]) for i in df_val['image_name']]
 
 imgs_train = [cv2.imread(i)[:, :, ::-1] for i in train_imgs]
 masks_train = [cv2.imread(i)[:, :, 0] for i in train_masks]
