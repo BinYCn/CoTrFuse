@@ -53,8 +53,8 @@ save_name = model_savedir + 'ckpt'
 
 df_test = pd.read_csv(args.csv_dir_test)
 test_imgs, test_masks = args.imgs_test_path, args.labels_test_path
-test_imgs = [''.join([test_imgs, '/', i.replace('.png', '.png')]) for i in df_test['image_name']]
-test_masks = [''.join([test_masks, '/', i.replace('.jpg', '_segmentation.png')]) for i in df_test['image_name']]
+test_imgs = [''.join([test_imgs, '/', i + '.png')]) for i in df_test['image_id']]
+test_masks = [''.join([test_masks, '/', i + '_segmentation.png')]) for i in df_test['image_id']]
 imgs_test = [cv2.imread(i)[:, :, ::-1] for i in test_imgs]
 masks_test = [cv2.imread(i)[:, :, 0] for i in test_masks]
 
