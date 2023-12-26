@@ -5,7 +5,7 @@
       (https://drive.google.com/drive/folders/1UC3XOoezeum0uck4KBVGa8osahs6rKUY?usp=sharing): Put pretrained Swin-T into folder "pretrained_ckpt/" and create dir 'chechpoint','test_log' in the root path.
 ## 2.Prepare data
    * You can also go to https://challenge.isic-archive.com/data/#2017 to acquire the ISIC2017 dataset. , and then fill in the corresponding path in `./datasets/process.py` before running it. Change the imgs_train_path, imgs_val_path, imgs_test_path in the train_ISIC to the path of the corresponding path.
-   * You can also go to https://www.kaggle.com/datasets/cf77495622971312010dd5934ee91f07ccbcfdea8e2f7778977ea8485c1914df to acquire the COVID-QU-Ex dataset.
+   * You can also go to https://www.kaggle.com/datasets/cf77495622971312010dd5934ee91f07ccbcfdea8e2f7778977ea8485c1914df to acquire the COVID-QU-Ex dataset. See `./datasets/train_covid.txt`, `./datasets/val_covid.txt`, `./datasets/test_covid.txt` for the way the data is divided for training, validation, and testing.
 ## 3. Environment
    * Please prepare an environment with python=3.8, and then use the command "pip install -r requirements.txt" for the dependencies.
 ## 4. Train/Test
